@@ -1,5 +1,5 @@
 from var import VaR
-import numpy as np
+
 
 """
 This script uses the VaR class to calculate the 1-day VaR value with 0.99 confidence level, with respect to the given 

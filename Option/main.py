@@ -104,11 +104,16 @@ def calculate_prices(method):
     black_scholes = BlackScholes(trade_date, expiration_date, spot_price, strike_price, interest_rate, volatility)
 
     # calculating the call and put option prices with respect to the requested method
-    if method == "spot":
-        call_price, put_price = black_scholes.calculation_with_spot_price()
-    elif method == "forward":
-        call_price, put_price = black_scholes.calculation_with_forward_price()
-    else:
+    try:
+        if method == "spot":
+            call_price, put_price = black_scholes.calculation_with_spot_price()
+        elif method == "forward":
+            call_price, put_price = black_scholes.calculation_with_forward_price()
+        else:
+            return None
+    # checking for division by zero
+    except ZeroDivisionError:
+        messagebox.showerror("Calculation Error", "Division by zero. Please make sure all the prices correct.")
         return None
 
     #show the price in GUI
