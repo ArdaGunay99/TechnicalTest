@@ -5,8 +5,8 @@ Solution for the Option question is implemented as a GUI application inspired by
 The application accepts spot price, strike price, risk-free interest rate, volatility, trade date, and expiration date
 from the user. Then, the user can select the method they want to use for option pricing calculation
 (spot price or forward). The calculations are done using the Black-Scholes model implemented in the Black_Scholes.py.
-To run the application, you can simply run BlackScholes.exe in Option\dist folder. If you would like to run the code
-from the scripts, please make sure to download the module stated in the requirements.txt file. test_black_scholes.py
+To run the application, you can simply run BlackScholes.exe located in Option\dist folder. If you would like to run the code
+from the scripts, please make sure to download the modules stated in the requirements.txt file. test_black_scholes.py
 is a unit test script which tests the program for in-the-money, at-the-money, and out-of-money situations. You can
 run the script after downloading the required modules.
 
